@@ -1,0 +1,3 @@
+C:/Users/Patrick/Documents/Github/Repositories/COMP10050/Focus/cmake-build-debug/CMakeFiles/Focus.dir
+C:/Users/Patrick/Documents/Github/Repositories/COMP10050/Focus/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Patrick/Documents/Github/Repositories/COMP10050/Focus/cmake-build-debug/CMakeFiles/rebuild_cache.dir
