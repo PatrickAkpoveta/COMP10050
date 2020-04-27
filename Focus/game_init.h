@@ -29,13 +29,9 @@ typedef enum square_type {
 typedef struct player{
     //the color associated with the player
     color player_color;
-    /*
-     * A player should also be characterized by:
-     * name,
-     * number of adversary's pieces captured,
-     * number of own pieces kept.
-     *
-    */
+    char name[21];
+    int numPiecesCap;  //number of opponent's pieces captured
+    int numPiecesSaved;   //number of player's pieces saved(and not currently on the board)
 }player;
 
 // A piece

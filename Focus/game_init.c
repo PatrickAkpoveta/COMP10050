@@ -11,8 +11,24 @@
 #include "game_init.h"
 
 void initialize_players(player players[PLAYERS_NUM]){
-
-    // implement here the functionality to initialize the players
+    for(size_t i=0;i<PLAYERS_NUM;i++){
+        switch(i){   //switch statement so player colours can be set
+            case 0: //(initialisng player)
+                players[i].player_color = RED;
+                printf("Enter the name of player 1(Red)(Max 20 characters):\n");
+                scanf("%s", players[i].name); //receiving player name
+                players[i].numPiecesCap = 0;
+                players[i].numPiecesSaved = 0;
+                break;
+            case 1:
+                players[i].player_color = GREEN;
+                printf("Enter the name of player 2(Green)(Max 20 characters):\n");
+                scanf("%s", players[i].name);
+                players[i].numPiecesCap = 0;
+                players[i].numPiecesSaved = 0;
+                break;
+        }
+    }
 
 }
 

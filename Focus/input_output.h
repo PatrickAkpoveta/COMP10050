@@ -12,3 +12,5 @@
 
 //Function to print the board
 void print_board(square board[BOARD_SIZE][BOARD_SIZE]);
+
+void printBoardStacks(square board[BOARD_SIZE][BOARD_SIZE]); //function to print the board along with the size of each stack

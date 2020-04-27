@@ -18,5 +18,6 @@ int main() {
     initialize_board(board);
 
     print_board(board);
+    printBoardStacks(board);
     return 0;
 }
