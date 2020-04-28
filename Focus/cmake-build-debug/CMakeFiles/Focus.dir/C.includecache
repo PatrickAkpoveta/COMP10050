@@ -6,13 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Patrick/Documents/Github/Repositories/COMP10050/Focus/game_init.c
-stdio.h
--
-stdlib.h
--
-game_init.h
 C:/Users/Patrick/Documents/Github/Repositories/COMP10050/Focus/game_init.h
 
+C:/Users/Patrick/Documents/Github/Repositories/COMP10050/Focus/input_output.c
+stdio.h
+-
+input_output.h
+C:/Users/Patrick/Documents/Github/Repositories/COMP10050/Focus/input_output.h
+stdlib.h
+-
+
+C:/Users/Patrick/Documents/Github/Repositories/COMP10050/Focus/input_output.h
+game_init.h
 C:/Users/Patrick/Documents/Github/Repositories/COMP10050/Focus/game_init.h
 

@@ -11,6 +11,7 @@
 #define BOARD_SIZE 8
 #define PLAYERS_NUM 2
 
+
 //colors that a piece can have
 typedef enum color {
     RED,

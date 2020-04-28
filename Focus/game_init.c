@@ -9,13 +9,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "game_init.h"
+extern int numRedSquares;  //global variables from main
+extern int numGreenSquares;
 
 void initialize_players(player players[PLAYERS_NUM]){
     for(size_t i=0;i<PLAYERS_NUM;i++){
         switch(i){   //switch statement so player colours can be set
             case 0: //(initialisng player)
                 players[i].player_color = RED;
-                printf("Enter the name of player 1(Red)(Max 20 characters):\n");
+                printf("\nEnter the name of player 1(Red)(Max 20 characters)(Red plays first):\n");
                 scanf("%s", players[i].name); //receiving player name
                 players[i].numPiecesCap = 0;
                 players[i].numPiecesSaved = 0;
@@ -53,6 +55,7 @@ s->stack = (piece *) malloc (sizeof(piece));
 s->stack->p_color = GREEN;
 s->stack->next = NULL;
 s->num_pieces = 1;
+numGreenSquares++;
 }
 
 //Set squares with a RED piece
@@ -62,6 +65,7 @@ s->stack = (piece *) malloc (sizeof(piece));
 s->stack->p_color = RED;
 s->stack->next = NULL;
 s->num_pieces = 1;
+numRedSquares++;
 }
 
 //initializes the board
