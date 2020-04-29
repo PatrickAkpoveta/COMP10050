@@ -112,7 +112,7 @@ void turn(color playerColor, char playerColorStr[], player players[], int player
         switch(choice) {   //switch to take care of choices and ensure validity
             case 1:
                 getchar();  //opening stdin, for direction/dest string
-                do{   ////FIXXXXX DIDDNT WORK WHEN DESTINATION WAS EMPTY!!!!!!!
+                do{   
                     dest(row1, col1, row2Ptr, col2Ptr, board);  //destination function, handles calculation of destination coordinates
                     if(row2<0 || col2<0 || row2>=BOARD_SIZE || col2>=BOARD_SIZE || board[row2][col2].type != VALID){   //if given coordinates are invalid, prints appropriate message to the user
                         printf("Invalid move, please try again:\n");
@@ -137,7 +137,7 @@ void turn(color playerColor, char playerColorStr[], player players[], int player
 
 }
 
-////FIXX FOR WHEN MORE THAN 1 DIRECTION!!!!!
+
 void dest(int row1, int col1, int*row2Ptr, int* col2Ptr, square board[BOARD_SIZE][BOARD_SIZE]){  //destination function, calculates destination coordinates
     char inputStr[21] = "";   //variable to hold the letters
     char c; //variable that holds each individual letter
@@ -151,7 +151,7 @@ void dest(int row1, int col1, int*row2Ptr, int* col2Ptr, square board[BOARD_SIZE
 
     //getchar();  //opening stdin
     gets(inputStr);
-    while (letterNum<(sizeof(inputStr))) {  ///see if Stdin needs to be "cleared"
+    while (letterNum<(sizeof(inputStr))) {
         c = inputStr[letterNum];
         if (moves < numPieces) {
             switch (c) {  //increments or decrements the row and column variables accordingly depending on the letter
@@ -177,7 +177,7 @@ void dest(int row1, int col1, int*row2Ptr, int* col2Ptr, square board[BOARD_SIZE
     }
 }
 
-                                                                                                                    ///add choice variable
+
 void moveBoard(int row1, int col1, int row2, int col2, player* playerPtr,square board[BOARD_SIZE][BOARD_SIZE]){   //function that takes care of moving stacks/pieces already on the board
     int totPieces=0, pieceNum=1;  //totPieces is the total number of pieces at 2(the destination),  pieceNum is initialised to 1 as piece 1(the top piece) of the stack is the first piece we look at
     piece* currPiece;  //pointer to current piece
@@ -258,7 +258,7 @@ void place(int row2, int col2, player* playerPtr, square board[BOARD_SIZE][BOARD
     }
 }
 
-void removeGrFive(int row2, int col2, piece* pieceFive, player* playerPtr, square board[BOARD_SIZE][BOARD_SIZE]){  ///add in functionality for captured and saved pieces and num pieces -5
+void removeGrFive(int row2, int col2, piece* pieceFive, player* playerPtr, square board[BOARD_SIZE][BOARD_SIZE]){
     piece* curr, *toRemove;  //pointer to current piece, pointer to piece to be removed/freed
     curr = (*pieceFive).next;   //current piece starts as the sixth piece of the stack
     while(curr!=NULL){  //loops until current piece is NULL(end of stack)
