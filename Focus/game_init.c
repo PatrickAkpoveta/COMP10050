@@ -55,7 +55,7 @@ s->stack = (piece *) malloc (sizeof(piece));
 s->stack->p_color = GREEN;
 s->stack->next = NULL;
 s->num_pieces = 1;
-numGreenSquares++;
+numGreenSquares++;  //incrementing numGreenSquares to keep track of how many squares there are with a green top piece
 }
 
 //Set squares with a RED piece
@@ -65,7 +65,7 @@ s->stack = (piece *) malloc (sizeof(piece));
 s->stack->p_color = RED;
 s->stack->next = NULL;
 s->num_pieces = 1;
-numRedSquares++;
+numRedSquares++;     //incrementing numRedSquares to keep track of how many squares there are with a red top piece
 }
 
 //initializes the board

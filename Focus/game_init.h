@@ -32,7 +32,7 @@ typedef struct player{
     color player_color;
     char name[21];
     int numPiecesCap;  //number of opponent's pieces captured
-    int numPiecesSaved;   //number of player's pieces saved(and not currently on the board)
+    int numPiecesSaved;   //number of player's pieces saved/reserved(and not currently on the board)
 }player;
 
 // A piece
@@ -41,7 +41,6 @@ typedef struct piece {
     color p_color;
 
     // This is a pointer to the next pieces
-    // to create a stack. For this lab you do not have to think too much about it.
     struct piece * next;
 
 }piece;
